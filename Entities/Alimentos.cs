@@ -117,8 +117,6 @@ namespace ws_proyecto.Entities
         [JsonIgnore]
         public GruposAlimenticios GruposAlimenticios { get; set; }
 
-        [JsonIgnore]
-        public ICollection<UsuariosAlimentos> UsuariosAlimentos { get; set; }
 
     }
 }

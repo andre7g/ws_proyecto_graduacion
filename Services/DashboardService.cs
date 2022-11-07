@@ -76,12 +76,14 @@ namespace ws_proyecto.Services
                 x.Estados.Estado,
                 x.Genero,
                 peso = _context.HistorialUsuarios.Where(h => h.UsuariosId == x.Id && h.EstadosId == 1).Select(s => s.Peso).FirstOrDefault(),
+                altura = _context.HistorialUsuarios.Where(h => h.UsuariosId == x.Id && h.EstadosId == 1).Select(s => s.Altura).FirstOrDefault(),
                 calorias = _context.HistorialUsuarios.Where(h => h.UsuariosId == x.Id && h.EstadosId == 1).Select(s => s.CaloriasConsumir).FirstOrDefault(),
+                imc = _context.HistorialUsuarios.Where(h => h.UsuariosId == x.Id && h.EstadosId == 1).Select(s => s.IMC).FirstOrDefault(),
                 sumatoria_rating = _context.HistorialUsuarios.Where(h => h.UsuariosId == x.Id).Sum(a => a.Rating),
                 cantidad_rating = _context.HistorialUsuarios.Where(h => h.UsuariosId == x.Id).Count()
 
                 //estado = x.Estados.Estado != null ? x.Estados.Estado : "null" 
-            }).OrderByDescending(u => u.sumatoria_rating);
+            }).OrderByDescending(u => (u.sumatoria_rating));
             
 
             if (data.ToList().Count() == 0) throw new KeyNotFoundException("Usuarios no encontrados");

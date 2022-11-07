@@ -15,30 +15,36 @@ namespace ws_proyecto.Entities
         public DateTime Fecha_Consumo { get; set; }
 
         [Precision(6, 2)]
-        public decimal? Cantidad { get; set; }
+        public int Cantidad { get; set; }
 
         [Precision(6, 2)]
-        public decimal? Calorias { get; set; }
+        public decimal Calorias { get; set; }
 
-        [Precision(6, 2)]
-        public decimal? Total { get; set; }
-
-        [Range(1, 2, ErrorMessage = "El campo Estado es obligatorio")]
-        [ForeignKey("EstadosId")]
-        public int EstadosId { get; set; }
-        [JsonIgnore]
-        public Estados Estados { get; set; }
+        [Precision(8, 2)]
+        public decimal Proteina_g { get; set; }
+        [Precision(8, 2)]
+        public decimal GrasaTotal_g { get; set; }
+        [Precision(8, 2)]
+        public decimal Carbohidratos_g { get; set; }
+        public int? Total { get; set; }
 
         [Range(1, 9999, ErrorMessage = "El campo Usuarios es obligatorio")]
         [ForeignKey("UsuariosId")]
         public int UsuariosId { get; set; }
         [JsonIgnore]
-        public Usuarios Usuarios { get; set; }
+        public Usuarios? Usuarios { get; set; }
 
-        [Range(1, 9999, ErrorMessage = "El campo Alimentos es obligatorio")]
-        [ForeignKey("AlimentosId")]
-        public int AlimentosId { get; set; }
+        [Range(1, 10000, ErrorMessage = "El campo AlimentosPorcion es obligatorio")]
+        [ForeignKey("EstadAlimentosPorcionIdosId")]
+        public int AlimentosPorcionId { get; set; }
         [JsonIgnore]
-        public Alimentos Alimentos { get; set; }
+        public AlimentosPorcion? AlimentosPorcion { get; set; }
+
+
+        [Range(1, 9999, ErrorMessage = "El campo EstadosId es obligatorio")]
+        [ForeignKey("EstadosId")]
+        public int EstadosId { get; set; }
+        [JsonIgnore]
+        public Estados? Estados { get; set; }
     }
 }

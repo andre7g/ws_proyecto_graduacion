@@ -44,22 +44,6 @@ namespace ws_proyecto.Entities
         [Required(ErrorMessage = "El campo Fecha_Inicio es obligatorio")]
         public DateTime Fecha_Inicio { get; set; }
 
-
-        //[MaxLength(50, ErrorMessage = "El máximo de caracteres permitidos es de 50")]
-        //[Required(ErrorMessage = "El campo Usuario Creación es obligatorio")]
-        //public string Usuario_Creacion { get; set; }
-
-        //[DataType(DataType.Date)]
-        //[DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
-        //[Required(ErrorMessage = "El campo Fecha Creación es obligatorio")]
-        //public DateTime Fecha_Creacion { get; set; }
-
-        //[MaxLength(50, ErrorMessage = "El máximo de caracteres permitidos es de 50")]
-        //public string? Usuario_Actualizacion { get; set; }
-        //[DataType(DataType.Date)]
-        //[DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
-        //public DateTime? Fecha_Actualizacion { get; set; }
-
         [MaxLength(1, ErrorMessage = "El máximo de caracteres permitidos es de 1")]
         [Required(ErrorMessage = "El campo Genero es obligatorio")]
         public string Genero { get; set; }

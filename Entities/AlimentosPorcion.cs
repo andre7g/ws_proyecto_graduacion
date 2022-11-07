@@ -51,6 +51,8 @@ namespace ws_proyecto.Entities
         public GruposAlimenticios? GruposAlimenticios { get; set; }
         [JsonIgnore]
         public ICollection<IngestaAlimentos>? IngestaAlimentos { get; set; }
-        
+        [JsonIgnore]
+        public ICollection<UsuariosAlimentos> UsuariosAlimentos { get; set; }
+
     }
 }

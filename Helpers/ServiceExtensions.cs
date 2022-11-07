@@ -26,6 +26,7 @@ namespace ws_proyecto.Helpers
             _services.AddScoped<IUsuarioDietas, UsuarioDietasService>();
             _services.AddScoped<IHistorialPagos, HistorialPagosService>();
             _services.AddScoped<IDashboard, DashboardService>();
+            _services.AddScoped<IUsuariosAlimentos, UsuariosAlimentosService>();
         }
     }
 }

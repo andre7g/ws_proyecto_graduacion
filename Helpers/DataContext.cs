@@ -38,6 +38,7 @@ namespace ws_proyecto.Helpers
         public DbSet<SeriesEjercicios> SeriesEjercicios { get; set; }
         public DbSet<UsuarioRutina> UsuarioRutina { get; set; }
         public DbSet<AlimentosPorcion> AlimentosPorcion { get; set; }
+        public DbSet<UsuariosAlimentos> UsuariosAlimentos { get; set; }
     }
 }
 
